@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calc</title>
+    <script src="calc.js" defer></script>
+  </head>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 50px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      margin: 25px;
+    }
+    .flex-v {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-container {
+      align-items: center;
+    }
+    .output {
+      border: solid 1px;
+      padding: 0 125px 0 125px;
+      background-color: aliceblue;
+      font-size: 25px;
+    }
+    #entry {
+      padding: 20px 60px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    #operators {
+      margin-top: 20px;
+    }
+
+    button {
+      font-size: 26px;
+      text-align: center;
+      margin: 3px;
+      padding: 15px 25px;
+    }
+  </style>
+
+  <body>
+    <header>
+      <h1>Simple Calculator</h1>
+    </header>
+    <section class="flex-v input-container">
+      <div>
+        <input type="text" name="entry" id="entry" placeholder="Enter Number" />
+      </div>
+
+      <div id="operators"></div>
+    </section>
+
+    <section class="grid">
+      <div class="output">
+        <h3>Entries</h3>
+        <ol reversed class="entry"></ol>
+      </div>
+      <div class="output">
+        <h3>Calculations</h3>
+        <ol reversed class="calculation"></ol>
+      </div>
+      <div class="output">
+        <h3>Results</h3>
+        <ol reversed class="result"></ol>
+      </div>
+    </section>
+  </body>
+</html>

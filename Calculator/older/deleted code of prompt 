@@ -1,0 +1,37 @@
+if (i === 0) {
+  input = prompt(
+    `${promptInputText}Number of Entries: \(${i + 1}/${maxEntries}\)`,
+    "0"
+  );
+} else {
+  input = prompt(
+    `${promptInputText}Number of Entries: \(${
+      i + 1
+    }/${maxEntries}\)\n\nPrevious Entries: ${previousText}`,
+    "0"
+  );
+}
+if (input == "" || input == "done" || input == "ok" || input == null) {
+  // break;
+}
+alert(`Only Numbers less then  ${MaxNumber} are allowed`);
+
+//-------------Input Control For Operator-----------
+
+operator = prompt(`${promptOperatorText}`, "+");
+
+for (let count = 0; operator != allArr.operatorArr[count]; count++) {
+  if (count >= allArr.operatorArr.length) {
+    operator = prompt(`Wrong Input!!\n${promptOperatorText}`, "+");
+    count = -1;
+  }
+}
+
+//-------------Output-------
+if (i === 0) {
+  previousText = `\n${i + 1}:  ${input}`;
+  allArr.resultArr.push(input);
+} else {
+  const temp = `\n${i + 1}:  ${input}`;
+  previousText = `${temp}${previousText}`;
+}
